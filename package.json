@@ -1,0 +1,47 @@
+{
+  "name": "collegemovers",
+  "version": "1.0.0",
+  "description": "college movers website",
+  "main": "lib/server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --watch",
+    "dev": "nodemon lib/server.js --exec babel-node --presets stage-2",
+    "webpack": "webpack -wd"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "env",
+      "stage-2"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smhood/CollegeMovers.git"
+  },
+  "author": "Scott Hood",
+  "license": "ISC",
+  "homepage": "https://github.com/smhood/CollegeMovers#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-env": "^2.4.1",
+    "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "nodemon": "^1.18.4",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "webpack": "^4.18.0"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
