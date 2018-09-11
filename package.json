@@ -16,7 +16,7 @@
     "verify-tests": "jest --coverage",
     "build-webpack": "webpack -p",
     "build-node": "babel lib -d build --copy-files",
-    "start-prod": "node start ./build/server.js "
+    "start-prod": "node ./build/server.js "
   },
   "babel": {
     "presets": [
