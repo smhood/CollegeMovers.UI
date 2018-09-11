@@ -9,7 +9,8 @@
   "scripts": {
     "test": "jest --watch",
     "dev": "nodemon lib/server.js --exec babel-node --presets stage-2",
-    "webpack": "webpack -wd"
+    "webpack": "webpack -wd",
+    "verify-tests": "jest --coverage"
   },
   "babel": {
     "presets": [
@@ -17,6 +18,9 @@
       "env",
       "stage-2"
     ]
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./lib/setupTests.js"
   },
   "repository": {
     "type": "git",
@@ -42,6 +46,8 @@
     "webpack": "^4.18.0"
   },
   "devDependencies": {
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
     "jest": "^23.6.0",
     "webpack-cli": "^3.1.0"
   }
