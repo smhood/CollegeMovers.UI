@@ -10,13 +10,27 @@
     "test": "jest --watch",
     "dev": "nodemon lib/server.js --exec babel-node --presets stage-2",
     "webpack": "webpack -wd",
-    "verify-tests": "jest --coverage"
+    "verify-tests": "jest --coverage",
+    "build-webpack": "webpack -p",
+    "build-node": "babel lib -d build --copy-files",
+    "start-prod": "nodemon build/server.js --exec"
   },
   "babel": {
     "presets": [
       "react",
-      "env",
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ],
       "stage-2"
+    ],
+    "plugins": [
+      "transform-class-properties",
+      "transform-object-rest-spread"
     ]
   },
   "jest": {
@@ -41,6 +55,7 @@
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "nodemon": "^1.18.4",
+    "pm2": "^3.1.2",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "webpack": "^3.0.0"
