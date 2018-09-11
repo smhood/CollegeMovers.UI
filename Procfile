@@ -1,0 +1,1 @@
+web: npm run build-webpack &  npm run build-node &&  npm run start-prod
