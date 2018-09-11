@@ -6,6 +6,9 @@
   "directories": {
     "lib": "lib"
   },
+  "engines": {
+    "node": "8.9.4"
+  },
   "scripts": {
     "test": "jest --watch",
     "dev": "nodemon lib/server.js --exec babel-node --presets stage-2",
