@@ -11,7 +11,7 @@ module.exports = {
       'react',
       'react-dom'
     ],
-    app: ['./lib/components/Index.js']
+    app: ['./lib/renderers/dom.js']
   },
   output: {
     path: path.resolve(__dirname, 'public'),
